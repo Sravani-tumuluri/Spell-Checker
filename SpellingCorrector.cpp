@@ -8,13 +8,13 @@ bool sortBySecond(const pair<std::string, int>& left, const pair<std::string, in
 {
   return left.second < right.second;
 }
-char filterNonAlphabetic(char& letter)
+boolean filterNonAlphabetic(char& letter)
 {
   if (letter < 0)
-    return '-';
+    return true;
   if (isalpha(letter))
-    return tolower(letter);
-  return '-';
+    return false;
+  return true;
 }
 void SpellingCorrector::load(const std::string& filename)
 {
